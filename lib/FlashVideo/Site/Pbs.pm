@@ -68,7 +68,7 @@ sub find_video {
   die "Couldn't find media_id\n" unless defined $media_id;
   debug "media_id: $media_id\n";
 
-  $browser->get("http://video.pbs.org/videoPlayerInfo/$media_id");
+  $browser->get("http://video.pbs.org/videoPlayerInfo/$media_id/");
 
   my $xml = $browser->content;
   $xml =~ s/&/&amp;/g;
